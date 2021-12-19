@@ -3,7 +3,9 @@ from colorama import *
 import sys
 import validators
 from validators.domain import domain
+import urllib3
 
+urllib3.disable_warnings()
 
 def banner():
     banner = """
@@ -31,7 +33,12 @@ def realWork(URL):
 
     if validators.url(URL) == True:
         print(Fore.YELLOW + "Domain: " + URL + "\n")
-        r = requests.get(URL)
+        
+        try:
+            r = requests.get(URL)
+        except requests.exceptions.SSLError:
+            print(Fore.CYAN +  "\n[E] - SSL can not be verified - Turning off SSL Verification!\n\n")
+            r = requests.get(URL, verify=False)
 
         try: 
 
