@@ -1,0 +1,3 @@
+validators=0.18.2
+colorama=0.4.4
+requests=2.26.0
