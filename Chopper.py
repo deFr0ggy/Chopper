@@ -130,15 +130,26 @@ def realWork(URL):
         try:
 
                 if r.status_code == requests.codes.ok:
-                    if r.headers['Access-Control-Allow-Origin'] != "" or r.headers['Access-Controls-Allow-Credentials'] != "":
+                    if r.headers['Access-Control-Allow-Origin'] != "":
                         print(Fore.GREEN + "[X] Access-Control-Allow-Origin: " +
                         Fore.RESET + r.headers['Access-Control-Allow-Origin'].strip(";"))
+                        print(Fore.MAGENTA + "[/] CORS Policy is enforced!")
+
+        except KeyError:
+            print(Fore.RED + "[-] Access-Control-Allow-Origin - CORS Policy is not in place!")
+
+        try:
+
+                if r.status_code == requests.codes.ok:
+                    if r.headers['Access-Controls-Allow-Credentials'] != "":
                         print(Fore.GREEN + "[X] Access-Control-Allow-Credentials: " +
                         Fore.RESET + r.headers['Access-Control-Allow-Credentials'].strip(";"))
                         print(Fore.MAGENTA + "[/] CORS Policy is enforced!")
 
         except KeyError:
-            print(Fore.RED + "[-] Access-Control-Allow-* - CORS Policy is not in place!")
+            print(Fore.RED + "[-] Access-Control-Allow-Credentials - CORS Policy is not in place!")
+
+
 
         try:
 
