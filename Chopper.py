@@ -160,6 +160,8 @@ def realWork(URL):
                             print(Fore.GREEN + "[X] Set-Cookie: " +
                         Fore.RESET + r.headers['Set-Cookie'].strip(";"))
                             print(Fore.MAGENTA + "[/] HttpOnly Flag is enforced!")
+                        else:
+                            print(Fore.RED + "[-] HttpOnly Flag is not in place!")
         
         except KeyError:
             print(Fore.RED + "[-] HttpOnly Flag is not in place!")
@@ -172,6 +174,8 @@ def realWork(URL):
                             print(Fore.GREEN + "[X] Set-Cookie: " +
                         Fore.RESET + r.headers['Set-Cookie'].strip(";"))
                             print(Fore.MAGENTA + "[/] Secure Flag is enforced!")
+                        else:
+                            print(Fore.RED + "[-] Secure Flag is not in place!")
         
         except KeyError:
             print(Fore.RED + "[-] Secure Flag is not in place!")
