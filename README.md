@@ -40,52 +40,9 @@ Chopper also provides with the complete list of headers. Thus, providing a bette
 - pip install -r requirements.txt
 - python -m pip install -r requirements.txt
 
-## Flying The Chopper
-> python3 Chopper.py http://testphp.vulnweb.com/login.php
+## Demo
 
-```
-  ____ _                                 _ 
- / ___| |__   ___  _ __  _ __   ___ _ __| |
-| |   | '_ \ / _ \| '_ \| '_ \ / _ \ '__| |
-| |___| | | | (_) | |_) | |_) |  __/ |  |_|
- \____|_| |_|\___/| .__/| .__/ \___|_|  (_)
-                  |_|   |_|                
-
- An Automated Security Headers Analyzer
- ------------------------------
- Coded by Kamran Saifullah - Frog Man
- Twitter: https://twitter.com/deFr0ggy 
- GitHub: https://github.com/deFr0ggy 
- LinkedIn: https://linkedin.com/in/kamransaifullah 
-
- Usage: ./Chopper.py <http|https://example.com>
+[![asciicast](https://asciinema.org/a/a7RMNVSXnJqx9GqbiMZ5yCsac.svg)](https://asciinema.org/a/a7RMNVSXnJqx9GqbiMZ5yCsac)
 
 
-Domain: http://testphp.vulnweb.com/login.php
-
-[-] Content-Security-Policy is not in place!
-[-] X-XSS-Protection - XSS Protection is not in place!
-[-] X-Frame-Headers - ClickJacking Protection is not in place!
-[-] X-Content-Type - MIME Sniffing Protection is not in place!
-[-] Strict-Transport-Security - Protection is not in place!
-[-] Referrer-Policy is not in place!
-[-] Feature-Policy is not in place!
-[-] Cache-Control Policy is not in place!
-[-] Access-Control-Allow-* - CORS Policy is not in place!
-[-] HttpOnly Flag is not in place!
-[-] Secure Flag is not in place!
-
-
-[-] Check These Headers Out! 
-
-
-Server:  nginx/1.19.0
-Date:  Sun, 19 Dec 2021 09:15:46 GMT
-Content-Type:  text/html; charset=UTF-8
-Transfer-Encoding:  chunked
-Connection:  keep-alive
-X-Powered-By:  PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1
-Content-Encoding:  gzip
-
-```
 
